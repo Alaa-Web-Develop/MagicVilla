@@ -1,23 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MagicVillaApi.Models
+namespace MagicVillaApi.Dto
 {
-    public class Villa
+    public class VillaCreateDto
     {
-        [Key]
-        public int Id { get; set; }
+        [Required]
+        [MaxLength(20)]
         public string Name { get; set; }
-        public DateTime CreatedDate { get; set; } = DateTime.Now;
-        public DateTime LastUpdatedOn { get; set; }
-
         public string Details { get; set; }
+
+        [Required]
         public double Rate { get; set; }
         public int Occupancy { get; set; }
         public int sqfet { get; set; }
         public string ImageUrl { get; set; }
         public string Amenity { get; set; }//الراحة اللطف
-
-       
-
     }
 }
